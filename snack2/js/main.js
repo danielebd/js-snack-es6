@@ -38,6 +38,8 @@ const students = [
     },
 ];
 
+
+//LISTA NOMI MAIUSCOLO
 const tags = students.map((element) => {
     const upperName = element.name.toUpperCase();
     return upperName;
@@ -45,4 +47,15 @@ const tags = students.map((element) => {
 console.log(tags);
 tags.forEach((element) => {
     console.log(element)
+})
+
+//LISTA VOTO > 70
+const superiorGrades = students.filter((element) => {
+    if(element.grades > 70){
+        return true
+    }
+})
+console.log(superiorGrades);
+superiorGrades.forEach((element, index) => {
+    console.log('id: ' + element.id, element.name,'voto: ' +  element.grades)
 })
