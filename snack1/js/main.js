@@ -10,3 +10,7 @@ const detailsIvited = invited.map((element, index) => {
 })
 
 console.log(detailsIvited)
+
+detailsIvited.forEach((element) => {
+    console.log('Nome: ' + element.nome, '- ' + element.tavolo, '- posto: ' + element.posto)
+})
