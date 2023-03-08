@@ -23,7 +23,7 @@ const students = [
     },
     {
         id: 196,
-        name: ' Luigi Grimaldello',
+        name: 'Luigi Grimaldello',
         grades: 68
     },
     {
@@ -36,4 +36,13 @@ const students = [
         name: 'Francesca da Polenta',
         grades: 84
     },
-]
+];
+
+const tags = students.map((element) => {
+    const upperName = element.name.toUpperCase();
+    return upperName;
+})
+console.log(tags);
+tags.forEach((element) => {
+    console.log(element)
+})
