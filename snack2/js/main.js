@@ -56,6 +56,17 @@ const superiorGrades = students.filter((element) => {
     }
 })
 console.log(superiorGrades);
-superiorGrades.forEach((element, index) => {
+superiorGrades.forEach((element) => {
+    console.log('id: ' + element.id, element.name,'voto: ' +  element.grades)
+})
+
+//LISTA VOTO > 70 & ID > 120
+const major = students.filter((element) => {
+    if(element.grades > 70 && element.id > 120){
+        return true
+    }
+})
+console.log(major);
+major.forEach((element) => {
     console.log('id: ' + element.id, element.name,'voto: ' +  element.grades)
 })
