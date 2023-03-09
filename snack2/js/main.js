@@ -40,10 +40,7 @@ const students = [
 
 
 //LISTA NOMI MAIUSCOLO
-const tags = students.map((element) => {
-    const upperName = element.name.toUpperCase();
-    return upperName;
-})
+const tags = students.map((element) => element.name.toUpperCase());
 console.log(tags);
 tags.forEach((element) => {
     console.log(element)
