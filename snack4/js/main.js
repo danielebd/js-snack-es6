@@ -40,3 +40,19 @@ const teams2 = teams.map((x) => {
 })
 console.log(teams2)
 
+const main = document.querySelector('main')
+teams.forEach((x) => {
+    const ul = document.createElement('ul');
+    main.append(ul);
+    const liName = document.createElement('div');
+    liName.innerHTML = x.name;
+    const liScore = document.createElement('li');
+    liScore.innerHTML = x.score;
+    const lifoulPlay = document.createElement('li');
+    lifoulPlay.innerHTML = x.foulPlay
+    main.append(liName)
+    liName.append(ul);
+    ul.append('score: ' + liScore);
+    ul.append('foul play: ' + lifoulPlay);
+})
+
