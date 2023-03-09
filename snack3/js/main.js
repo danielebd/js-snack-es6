@@ -22,3 +22,14 @@ const bikes = [
         weightkg: 7
     },
 ]
+
+const bike = bikes[3];
+console.log(bike);
+console.log(`${JSON.stringify(bike)}`);
+
+
+/* bikes.forEach(function() {
+    const {name} = bikes
+    return {name}
+})
+console.log() */
