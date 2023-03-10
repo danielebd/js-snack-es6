@@ -23,10 +23,31 @@ const bikes = [
     },
 ]
 
-const bike = bikes[3];
-console.log(bike);
-console.log(`${JSON.stringify(bike)}`);
+if (bikes.length === 0) {
+    console.log(`Non ho bici`);
+} else {
 
+    let theBike = bikes[0];
+    //confronto anche la prima bici con se stess
+    bikes.forEach(currentBike => {
+        if (currentBike.weightkg <= theBike.weightkg) {
+            theBike = currentBike;
+        }
+    })
+
+    //filtro tutte le bici più leggere partendo come riferimento dalla bici più leggera trovata
+    const resultBikes = bikes.filter(({ weightkg }) => {
+        if (weightkg === theBike.weightkg) {
+            return true;
+        }
+    });
+
+
+//stampo il risultato della mia ricerca
+resultBikes.forEach(({ name, weightkg }) => {
+    console.log(`La bici più leggera è la bici ${name} che pesa ${weightkg} kg`);
+})
+}
 
 /* bikes.forEach(function() {
     const {name} = bikes
