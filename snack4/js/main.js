@@ -35,8 +35,8 @@ teams.forEach(element => {
 });
 console.log(teams);
 
-const teams2 = teams.map((x) => {
-    return {nome: x.name, foulPlay: x.foulPlay }
+const teams2 = teams.map(({name, foulPlay}) => {
+    return {name, foulPlay}
 })
 console.log(teams2)
 
