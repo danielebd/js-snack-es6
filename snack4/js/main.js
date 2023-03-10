@@ -35,9 +35,7 @@ teams.forEach(element => {
 });
 console.log(teams);
 
-const teams2 = teams.map(({name, foulPlay}) => {
-    return {name, foulPlay}
-})
+const teams2 = teams.map(({name, foulPlay}) => ({name, foulPlay}))
 console.log(teams2)
 
 const main = document.querySelector('main')
